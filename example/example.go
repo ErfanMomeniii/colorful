@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	colorful.Print(colorful.RedColor, colorful.BlueBackground, "hello")
+	colorful.Print(colorful.BlackColor, colorful.GreenBackground, " success ")
 }
