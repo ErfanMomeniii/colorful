@@ -4,6 +4,7 @@ import "fmt"
 
 // color
 const (
+	DefaultColor       = ""
 	BlackColor         = "\u001b[30m"
 	RedColor           = "\u001b[31m"
 	GreenColor         = "\u001b[32m"
@@ -25,6 +26,7 @@ const (
 
 // background color
 const (
+	DefaultBackground       = ""
 	BlackBackground         = "\u001b[40m"
 	RedBackground           = "\u001b[41m"
 	GreenBackground         = "\u001b[42m"
@@ -43,20 +45,28 @@ const (
 	BrightWhiteBackground   = "\u001b[47;1m"
 )
 
-func Print(color string, background string, text ...interface{}) {
+func Print(color string, background string, text ...any) {
 	fmt.Print(color, background, fmt.Sprint(text...), ResetColor)
 }
 
-func Println(color string, background string, text ...interface{}) {
+func Println(color string, background string, text ...any) {
 	fmt.Println(color, background, fmt.Sprint(text...), ResetColor)
 }
 
-func Sprintln(color string, background string, text ...interface{}) {
-	fmt.Sprintln(color, background, fmt.Sprintln(text...), ResetColor)
+func Printf(color string, background string, format string, params ...any) {
+	fmt.Printf(color, background, fmt.Sprintf(format, params...), ResetColor)
 }
 
-func Sprint(color string, background string, text ...interface{}) {
-	fmt.Sprintln(color, background, fmt.Sprintln(text...), ResetColor)
+func Sprintln(color string, background string, text ...any) string {
+	return color + background + fmt.Sprint(text...) + ResetColor + "\n"
+}
+
+func Sprint(color string, background string, text ...any) string {
+	return color + background + fmt.Sprint(text...) + ResetColor
+}
+
+func Sprintf(color string, background string, format string, params ...any) string {
+	return color + background + fmt.Sprintf(format, params...) + ResetColor
 }
 
 func GetColorFromCode(code int) string {
