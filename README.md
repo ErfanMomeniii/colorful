@@ -17,15 +17,15 @@ import "github.com/ErfanMomeniii/colorful"
 ### Supported Colors
 
 |                                                                 |
-|:----------------------------------------------------------------| 
-| ![black color](./assets/photo/colors/Black.png)                 |
+|:----------------------------------------------------------------|
 | ![red color](./assets/photo/colors/Red.png)                     |
 | ![green color](./assets/photo/colors/Green.png)                 |
 | ![yellow color](./assets/photo/colors/Yellow.png)               |
 | ![blue color](./assets/photo/colors/Blue.png)                   |
 | ![magenta color](./assets/photo/colors/Magenta.png)             |
 | ![cyan color](./assets/photo/colors/Cyan.png)                   |
-| ![white color](./assets/photo/colors/White.png)                 |
+| ![white color](./assets/photo/colors/White.png)                 | 
+| ![black color](./assets/photo/colors/Black.png)                 |
 | ![brightBlack color](./assets/photo/colors/BrightBlack.png)     |
 | ![brightRed color](./assets/photo/colors/BrightRed.png)         |
 | ![brightGreen color](./assets/photo/colors/BrightGreen.png)     |
