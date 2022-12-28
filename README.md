@@ -34,8 +34,9 @@ import "github.com/ErfanMomeniii/colorful"
 | ![brightMagenta color](./assets/photo/colors/BrightMagenta.png) |
 | ![brightCyan color](./assets/photo/colors/BrightCyan.png)       |
 | ![brightWhite color](./assets/photo/colors/BrightWhite.png)     |
->**You can also use the following color codes:
->![color code](./assets/photo/colors/code.png)**
+>You can also use the following color codes :
+>
+>![color code](./assets/photo/colors/code.png)
 
 ### Supported Background Colors
 |                                                                      |
@@ -56,8 +57,9 @@ import "github.com/ErfanMomeniii/colorful"
 | ![brightMagenta background](./assets/photo/backgrounds/BrightMagenta.png) |
 | ![brightCyan background](./assets/photo/backgrounds/BrightCyan.png)       |
 | ![brightWhite background](./assets/photo/backgrounds/BrightWhite.png)     |
->**You can also use the following background codes :
->![color code](./assets/photo/backgrounds/code.png)**
+>You can also use the following background codes :
+>
+>![color code](./assets/photo/backgrounds/code.png)
 
 ## Quick Start
 
@@ -91,6 +93,6 @@ func main() {
 }
 
 ```
-##Contributing
+## Contributing
 Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
