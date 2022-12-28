@@ -75,7 +75,7 @@ func main() {
 }
 
 ```
-:warning: **If you dont use ResetColor**:  ,Next time it will be printed with the same color as the one you had been set 
+:warning: **If you dont use ResetColor**  ,Next time it will be printed with the same color as the one you had been set 
 
 The following example demonstrates how to print text using color and background code:
 ```go
