@@ -54,7 +54,7 @@ func Println(color string, background string, text ...any) {
 }
 
 func Printf(color string, background string, format string, params ...any) {
-	fmt.Printf(color, background, fmt.Sprintf(format, params...), ResetColor)
+	fmt.Print(color, background, fmt.Sprintf(format, params...), ResetColor)
 }
 
 func Sprintln(color string, background string, text ...any) string {
