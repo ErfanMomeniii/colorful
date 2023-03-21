@@ -81,26 +81,11 @@ import (
 
 func main() {
 	colorful.Println(colorful.RedColor, colorful.BlueBackground, 
-		"RedColorBlueBackground", colorful.ResetColor)
+		"RedColorBlueBackground")
 }
 
 ```
-:warning: **If you dont use ResetColor**  ,Next time it will be printed with the same color as the one you had been set 
 
-The following example demonstrates how to print text using color and background code:
-```go
-package main
-
-import (
-	"github.com/ErfanMomeniii/colorful"
-)
-
-func main() {
-	colorful.Println(colorful.GetBackgroundColorFromCode(1), colorful.GetBackgroundColorFromCode(4), 
-		"RedColorBlueBackground", colorful.ResetColor)
-}
-
-```
 ## Contributing
 Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
