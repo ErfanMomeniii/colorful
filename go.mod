@@ -1,4 +1,4 @@
-module github.com/ErfanMomeniii/colorful
+module github.com/erfanmomeniii/colorful
 
 go 1.19
 
