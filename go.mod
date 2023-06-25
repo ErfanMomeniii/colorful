@@ -1,4 +1,4 @@
-module github.com/erfanmomeniii/colorful
+module github.com/erfanmomeniii/colorful/v2
 
 go 1.20
 
