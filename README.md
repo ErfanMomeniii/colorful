@@ -10,18 +10,23 @@
 
 # colorful
 
-colorful is a lightweight package for rendering colorful text in terminal with Go you can use this instead of **fmt** package for having many features.
-
+colorful is a lightweight package for rendering colorful text in terminal with Go you can use this instead of **fmt**
+package for having many features.
 
 # Documentation
+
 ## Install
+
 ```bash
 go get github.com/erfanmomeniii/colorful
 ```   
+
 Next, include it in your application:
+
 ```bash
 import "github.com/erfanmomeniii/colorful"
 ``` 
+
 ### Supported Colors
 
 |                                                                 |
@@ -42,11 +47,13 @@ import "github.com/erfanmomeniii/colorful"
 | ![brightMagenta color](./assets/photo/colors/BrightMagenta.png) |
 | ![brightCyan color](./assets/photo/colors/BrightCyan.png)       |
 | ![brightWhite color](./assets/photo/colors/BrightWhite.png)     |
->You can also use the following color codes :
+
+> You can also use the following color codes :
 >
 >![color code](./assets/photo/colors/code.png)
 
 ### Supported Background Colors
+
 |                                                                      |
 |:---------------------------------------------------------------------| 
 | ![black background](./assets/photo/backgrounds/Black.png)                 |
@@ -65,13 +72,15 @@ import "github.com/erfanmomeniii/colorful"
 | ![brightMagenta background](./assets/photo/backgrounds/BrightMagenta.png) |
 | ![brightCyan background](./assets/photo/backgrounds/BrightCyan.png)       |
 | ![brightWhite background](./assets/photo/backgrounds/BrightWhite.png)     |
->You can also use the following background codes :
+
+> You can also use the following background codes :
 >
 >![color code](./assets/photo/backgrounds/code.png)
 
 ## Quick Start
 
 The following example demonstrates how to print text in desired format and color:
+
 ```go
 package main
 
@@ -80,12 +89,20 @@ import (
 )
 
 func main() {
-	colorful.Println(colorful.RedColor, colorful.BlueBackground, 
-		"RedColorBlueBackground")
+	colorful.WithColor(colorful.RedColor).
+		WithBackgroundColor(colorful.BlueBackgroundColor).
+		Println("RedColorBlueBackground")
+
+	colorful.WithColor(colorful.GreenColor).
+		Println("GreenColor")
+
+	colorful.WithBackgroundColor(colorful.YellowBackgroundColor).
+		Println("YellowBackground")
 }
 
 ```
 
 ## Contributing
-Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate.
+
+Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change. Please make
+sure to update tests as appropriate.

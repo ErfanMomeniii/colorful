@@ -1,8 +1,10 @@
 package colorful
 
-import "fmt"
+import (
+	"fmt"
+)
 
-// color
+// Color
 const (
 	DefaultColor       = ""
 	BlackColor         = "\u001b[30m"
@@ -24,49 +26,104 @@ const (
 	ResetColor         = "\u001b[0m"
 )
 
-// background color
+// Background color
 const (
-	DefaultBackground       = ""
-	BlackBackground         = "\u001b[40m"
-	RedBackground           = "\u001b[41m"
-	GreenBackground         = "\u001b[42m"
-	YellowBackground        = "\u001b[43m"
-	BlueBackground          = "\u001b[44m"
-	MagentaBackground       = "\u001b[45m"
-	CyanBackground          = "\u001b[46m"
-	WhiteBackground         = "\u001b[47m"
-	BrightBlackBackground   = "\u001b[40;1m"
-	BrightRedBackground     = "\u001b[41;1m"
-	BrightGreenBackground   = "\u001b[42;1m"
-	BrightYellowBackground  = "\u001b[43;1m"
-	BrightBlueBackground    = "\u001b[44;1m"
-	BrightMagentaBackground = "\u001b[45;1m"
-	BrightCyanBackground    = "\u001b[46;1m"
-	BrightWhiteBackground   = "\u001b[47;1m"
+	DefaultBackgroundColor       = ""
+	BlackBackgroundColor         = "\u001b[40m"
+	RedBackgroundColor           = "\u001b[41m"
+	GreenBackgroundColor         = "\u001b[42m"
+	YellowBackgroundColor        = "\u001b[43m"
+	BlueBackgroundColor          = "\u001b[44m"
+	MagentaBackgroundColor       = "\u001b[45m"
+	CyanBackgroundColor          = "\u001b[46m"
+	WhiteBackgroundColor         = "\u001b[47m"
+	BrightBlackBackgroundColor   = "\u001b[40;1m"
+	BrightRedBackgroundColor     = "\u001b[41;1m"
+	BrightGreenBackgroundColor   = "\u001b[42;1m"
+	BrightYellowBackgroundColor  = "\u001b[43;1m"
+	BrightBlueBackgroundColor    = "\u001b[44;1m"
+	BrightMagentaBackgroundColor = "\u001b[45;1m"
+	BrightCyanBackgroundColor    = "\u001b[46;1m"
+	BrightWhiteBackgroundColor   = "\u001b[47;1m"
 )
 
-func Print(color string, background string, text ...any) {
-	fmt.Print(color, background, fmt.Sprint(text...), ResetColor)
+type Pattern struct {
+	Color           string
+	BackgroundColor string
 }
 
-func Println(color string, background string, text ...any) {
-	fmt.Println(color, background, fmt.Sprint(text...), ResetColor)
+func WithColor(color string) *Pattern {
+	return &Pattern{
+		Color:           color,
+		BackgroundColor: DefaultBackgroundColor,
+	}
 }
 
-func Printf(color string, background string, format string, params ...any) {
-	fmt.Print(color, background, fmt.Sprintf(format, params...), ResetColor)
+func WithBackgroundColor(backgroundColor string) *Pattern {
+	return &Pattern{
+		Color:           DefaultColor,
+		BackgroundColor: backgroundColor,
+	}
 }
 
-func Sprintln(color string, background string, text ...any) string {
-	return color + background + fmt.Sprint(text...) + ResetColor + "\n"
+func (p *Pattern) WithColor(color string) *Pattern {
+	p.Color = color
+
+	return p
 }
 
-func Sprint(color string, background string, text ...any) string {
-	return color + background + fmt.Sprint(text...) + ResetColor
+func (p *Pattern) WithBackgroundColor(backgroundColor string) *Pattern {
+	p.BackgroundColor = backgroundColor
+
+	return p
 }
 
-func Sprintf(color string, background string, format string, params ...any) string {
-	return color + background + fmt.Sprintf(format, params...) + ResetColor
+func Print(text ...any) {
+	fmt.Print(text...)
+}
+
+func (p *Pattern) Print(text ...any) {
+	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+}
+
+func Println(text ...any) {
+	fmt.Println(text...)
+}
+
+func (p *Pattern) Println(text ...any) {
+	fmt.Println(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+}
+
+func Printf(format string, params ...any) {
+	fmt.Printf(format, params...)
+}
+
+func (p *Pattern) Printf(format string, params ...any) {
+	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprintf(format, params...), ResetColor)
+}
+
+func Sprint(text ...any) string {
+	return fmt.Sprint(text...)
+}
+
+func (p *Pattern) Sprint(text ...any) string {
+	return p.Color + p.BackgroundColor + fmt.Sprint(text...) + ResetColor
+}
+
+func Sprintln(text ...any) string {
+	return fmt.Sprintln(text...)
+}
+
+func (p *Pattern) Sprintln(text ...any) string {
+	return p.Color + p.BackgroundColor + fmt.Sprint(text...) + ResetColor + "\n"
+}
+
+func Sprintf(format string, params ...any) string {
+	return fmt.Sprintf(format, params...)
+}
+
+func (p *Pattern) Sprintf(format string, params ...any) string {
+	return p.Color + p.BackgroundColor + fmt.Sprintf(format, params...) + ResetColor
 }
 
 func GetColorFromCode(code int) string {

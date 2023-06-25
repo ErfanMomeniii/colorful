@@ -5,20 +5,26 @@ import (
 )
 
 func main() {
-	colorful.Println(colorful.BlackColor, colorful.DefaultBackground, "BlackColor")
-	colorful.Println(colorful.RedColor, colorful.DefaultBackground, "RedColor")
-	colorful.Println(colorful.GreenColor, colorful.DefaultBackground, "GreenColor")
-	colorful.Println(colorful.YellowColor, colorful.DefaultBackground, "YellowColor")
-	colorful.Println(colorful.BlueColor, colorful.DefaultBackground, "BlueColor")
-	colorful.Println(colorful.MagentaColor, colorful.DefaultColor, "MagentaColor")
-	colorful.Println(colorful.CyanColor, colorful.DefaultBackground, "CyanColor")
-	colorful.Println(colorful.WhiteColor, colorful.DefaultBackground, "WhiteColor")
-	colorful.Println(colorful.BrightBlackColor, colorful.DefaultBackground, "BrightBlackColor")
-	colorful.Println(colorful.BrightRedColor, colorful.DefaultBackground, "BrightRedColor")
-	colorful.Println(colorful.BrightGreenColor, colorful.DefaultBackground, "BrightGreenColor")
-	colorful.Println(colorful.BrightYellowColor, colorful.DefaultColor, "BrightYellowColor")
-	colorful.Println(colorful.BrightBlueColor, colorful.DefaultColor, "BrightBlueColor")
-	colorful.Println(colorful.BrightMagentaColor, colorful.DefaultColor, "BrightMagentaColor")
-	colorful.Println(colorful.BrightCyanColor, colorful.DefaultColor, "BrightCyanColor")
-	colorful.Println(colorful.BrightWhiteColor, colorful.DefaultColor, "BrightWhiteColor")
+	// only with colorful color
+	colorful.WithColor(colorful.BlackColor).Println("BlackColor")
+	colorful.WithColor(colorful.RedColor).Println("RedColor")
+	colorful.WithColor(colorful.GreenColor).Println("GreenColor")
+	colorful.WithColor(colorful.YellowColor).Println("YellowColor")
+	colorful.WithColor(colorful.BlueColor).Println("BlueColor")
+	colorful.WithColor(colorful.MagentaColor).Println("MagentaColor")
+	colorful.WithColor(colorful.CyanColor).Println("CyanColor")
+	colorful.WithColor(colorful.WhiteColor).Println("WhiteColor")
+
+	//only with colorful background color
+	colorful.WithBackgroundColor(colorful.RedBackgroundColor).Println("RedBackgroundColor")
+	colorful.WithBackgroundColor(colorful.GreenBackgroundColor).Println("GreenBackgroundColor")
+	colorful.WithBackgroundColor(colorful.YellowBackgroundColor).Println("YellowBackgroundColor")
+	colorful.WithBackgroundColor(colorful.BlueBackgroundColor).Println("BlueBackgroundColor")
+	colorful.WithBackgroundColor(colorful.BlackBackgroundColor).Println("BlackBackgroundColor")
+
+	// with coloful color and background color
+	colorful.WithColor(colorful.RedColor).WithBackgroundColor(colorful.BlueBackgroundColor).Println("RedColor+BlueBackgroundColor")
+	colorful.WithColor(colorful.YellowColor).WithBackgroundColor(colorful.GreenBackgroundColor).Println("YellowColor+GreenBackgroundColor")
+	colorful.WithColor(colorful.BlackColor).WithBackgroundColor(colorful.WhiteBackgroundColor).Println("BlackColor+WhiteBackgroundColor")
+	colorful.WithColor(colorful.WhiteColor).WithBackgroundColor(colorful.BlackBackgroundColor).Println("WhiteColor+BlackBackgroundColor")
 }
