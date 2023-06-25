@@ -84,7 +84,7 @@ func (p *Pattern) WithBackgroundColor(backgroundColor string) *Pattern {
 }
 
 // Print prints inputted text.
-func Print(text ...any) {
+func Print(text ...any) *Pattern {
 	fmt.Print(text...)
 }
 
