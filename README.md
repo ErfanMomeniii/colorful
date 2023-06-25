@@ -18,13 +18,13 @@ package for having many features. For seeing usages check [this](https://pkg.go.
 ## Install
 
 ```bash
-go get github.com/erfanmomeniii/colorful
+go get github.com/erfanmomeniii/colorful/v2
 ```   
 
 Next, include it in your application:
 
 ```bash
-import "github.com/erfanmomeniii/colorful"
+import "github.com/erfanmomeniii/colorful/v2"
 ``` 
 
 ## Quick Start
@@ -35,7 +35,7 @@ The following example demonstrates how to print text in desired format and color
 package main
 
 import (
-	"github.com/erfanmomeniii/colorful"
+	"github.com/erfanmomeniii/colorful/v2"
 )
 
 func main() {
