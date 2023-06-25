@@ -149,6 +149,6 @@ func Color(colorCode int) string {
 }
 
 // BackgroundColor returns background color with the inputted code.
-func BackgroundColor(backgroundColorCode int) string {
-	return fmt.Sprintf("\u001b[48;5;%dm", backgroundColorCode)
+func BackgroundColor(backgroundcolorCode int) string {
+	return fmt.Sprintf("\u001b[48;5;%dm", backgroundcolorCode)
 }
