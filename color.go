@@ -86,6 +86,11 @@ func (p *Pattern) WithBackgroundColor(backgroundColor string) *Pattern {
 // Print prints inputted text.
 func Print(text ...any) *Pattern {
 	fmt.Print(text...)
+
+	return &Pattern{
+		Color:           DefaultColor,
+		BackgroundColor: DefaultBackgroundColor,
+	}
 }
 
 // Print prints inputted text formats with the color and background that set in the pattern.
