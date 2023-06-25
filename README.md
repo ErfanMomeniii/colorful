@@ -5,7 +5,7 @@
 </a>
 
 <img src="https://img.shields.io/badge/license-MIT-magenta?style=for-the-badge&logo=none" alt="license" />
-<img src="https://img.shields.io/badge/Version-2.1.1-red?style=for-the-badge&logo=none" alt="version" />
+<img src="https://img.shields.io/badge/Version-v2.1.2-red?style=for-the-badge&logo=none" alt="version" />
 </p>
 
 # colorful
