@@ -16,11 +16,11 @@ colorful is a lightweight package for rendering colorful text in terminal with G
 # Documentation
 ## Install
 ```bash
-go get github.com/ErfanMomeniii/colorful
+go get github.com/erfanmomeniii/colorful
 ```   
 Next, include it in your application:
 ```bash
-import "github.com/ErfanMomeniii/colorful"
+import "github.com/erfanmomeniii/colorful"
 ``` 
 ### Supported Colors
 
@@ -76,7 +76,7 @@ The following example demonstrates how to print text in desired format and color
 package main
 
 import (
-	"github.com/ErfanMomeniii/colorful"
+	"github.com/erfanmomeniii/colorful"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ErfanMomeniii/colorful"
+	"github.com/erfanmomeniii/colorful"
 )
 
 func main() {
