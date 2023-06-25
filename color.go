@@ -47,11 +47,13 @@ const (
 	BrightWhiteBackgroundColor   = "\u001b[47;1m"
 )
 
+// Pattern is an instantiation that defines color and background color.
 type Pattern struct {
 	Color           string
 	BackgroundColor string
 }
 
+// WithColor returns pattern with inputted color
 func WithColor(color string) *Pattern {
 	return &Pattern{
 		Color:           color,
@@ -59,6 +61,7 @@ func WithColor(color string) *Pattern {
 	}
 }
 
+// WithBackgroundColor returns pattern with inputted background color.
 func WithBackgroundColor(backgroundColor string) *Pattern {
 	return &Pattern{
 		Color:           DefaultColor,
@@ -66,70 +69,86 @@ func WithBackgroundColor(backgroundColor string) *Pattern {
 	}
 }
 
+// WithColor returns patterns that changed color with inputted color.
 func (p *Pattern) WithColor(color string) *Pattern {
 	p.Color = color
 
 	return p
 }
 
+// WithBackgroundColor returns patterns that changed color with inputted background color.
 func (p *Pattern) WithBackgroundColor(backgroundColor string) *Pattern {
 	p.BackgroundColor = backgroundColor
 
 	return p
 }
 
+// Print prints inputted text.
 func Print(text ...any) {
 	fmt.Print(text...)
 }
 
+// Print prints inputted text formats with the color and background that set in the pattern.
 func (p *Pattern) Print(text ...any) {
 	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
 }
 
+// Println prints text and ends with newline.
 func Println(text ...any) {
 	fmt.Println(text...)
 }
 
+// Println prints text formats with the color and background that set in the pattern and ends with newline.
 func (p *Pattern) Println(text ...any) {
 	fmt.Println(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
 }
 
+// Printf prints text formats with the inputted format.
 func Printf(format string, params ...any) {
 	fmt.Printf(format, params...)
 }
 
+// Printf prints text formats with the inputted format ,color and background that set in the pattern.
 func (p *Pattern) Printf(format string, params ...any) {
 	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprintf(format, params...), ResetColor)
 }
 
+// Sprint returns string .
 func Sprint(text ...any) string {
 	return fmt.Sprint(text...)
 }
 
+// Sprint returns string that formats with color and background color that set in the pattern.
 func (p *Pattern) Sprint(text ...any) string {
 	return p.Color + p.BackgroundColor + fmt.Sprint(text...) + ResetColor
 }
 
+// Sprintln returns string that formats with the inputted format and ends with new line.
 func Sprintln(text ...any) string {
 	return fmt.Sprintln(text...)
 }
 
+// Sprintln returns string that formats with the inputted format and color and background color set in the pattern and ends with new line.
 func (p *Pattern) Sprintln(text ...any) string {
 	return p.Color + p.BackgroundColor + fmt.Sprint(text...) + ResetColor + "\n"
 }
 
+// Sprintf returns string that formats with the inputted format.
 func Sprintf(format string, params ...any) string {
 	return fmt.Sprintf(format, params...)
 }
 
+// Sprintf returns string that formats with the inputted format and color and background that set in the pattern.
 func (p *Pattern) Sprintf(format string, params ...any) string {
 	return p.Color + p.BackgroundColor + fmt.Sprintf(format, params...) + ResetColor
 }
 
-func GetColorFromCode(code int) string {
-	return fmt.Sprintf("\u001b[38;5;%dm", code)
+// Color returns color with the inputted code.
+func Color(colorCode int) string {
+	return fmt.Sprintf("\u001b[38;5;%dm", colorCode)
 }
 
-func GetBackgroundColorFromCode(code int) string {
-	return fmt.Sprintf("\u001b[48;5;%dm", code)
+// BackgroundColor returns background color with the inputted code.
+func BackgroundColor(backgroundcolorCode int) string {
+	return fmt.Sprintf("\u001b[48;5;%dm", backgroundcolorCode)
 }
