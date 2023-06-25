@@ -10,8 +10,8 @@
 
 # colorful
 
-colorful is a lightweight package for rendering colorful text in terminal with Go you can use this instead of **fmt**
-package for having many features. for seeing usages check [this](https://pkg.go.dev/github.com/erfanmomeniii/colorful).
+<i>colorful</i> is a lightweight package for rendering colorful text in terminal with Go . You can use this instead of **fmt**
+package for having many features. For seeing usages check [this](https://pkg.go.dev/github.com/erfanmomeniii/colorful).
 
 # Documentation
 
