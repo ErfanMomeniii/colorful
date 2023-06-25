@@ -89,28 +89,44 @@ func Print(text ...any) {
 }
 
 // Print prints inputted text formats with the color and background that set in the pattern.
-func (p *Pattern) Print(text ...any) {
+func (p *Pattern) Print(text ...any) *Pattern {
 	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+
+	return p
 }
 
 // Println prints text and ends with newline.
-func Println(text ...any) {
+func Println(text ...any) *Pattern {
 	fmt.Println(text...)
+
+	return &Pattern{
+		Color:           DefaultColor,
+		BackgroundColor: DefaultBackgroundColor,
+	}
 }
 
 // Println prints text formats with the color and background that set in the pattern and ends with newline.
-func (p *Pattern) Println(text ...any) {
+func (p *Pattern) Println(text ...any) *Pattern {
 	fmt.Println(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+
+	return p
 }
 
 // Printf prints text formats with the inputted format.
-func Printf(format string, params ...any) {
+func Printf(format string, params ...any) *Pattern {
 	fmt.Printf(format, params...)
+
+	return &Pattern{
+		Color:           DefaultColor,
+		BackgroundColor: DefaultBackgroundColor,
+	}
 }
 
 // Printf prints text formats with the inputted format ,color and background that set in the pattern.
-func (p *Pattern) Printf(format string, params ...any) {
+func (p *Pattern) Printf(format string, params ...any) *Pattern {
 	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprintf(format, params...), ResetColor)
+
+	return p
 }
 
 // Sprint returns string .

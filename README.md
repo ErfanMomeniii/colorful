@@ -52,6 +52,25 @@ func main() {
 
 ```
 
+You can also print many texts with different colors and background colors only in one operation like below:
+```
+package main
+
+import (
+	"github.com/erfanmomeniii/colorful/v2"
+)
+
+func main() {
+	colorful.WithColor(colorful.RedColor).
+		Print("Hi ").
+		WithColor(colorful.BlueColor).
+		Print("Erfan")
+}
+```
+output:
+    
+<img src="./assets/photo/multiple.png" />
+
 ### Supported Colors
 
 |                                                                 |

@@ -27,4 +27,10 @@ func main() {
 	colorful.WithColor(colorful.YellowColor).WithBackgroundColor(colorful.GreenBackgroundColor).Println("YellowColor+GreenBackgroundColor")
 	colorful.WithColor(colorful.BlackColor).WithBackgroundColor(colorful.WhiteBackgroundColor).Println("BlackColor+WhiteBackgroundColor")
 	colorful.WithColor(colorful.WhiteColor).WithBackgroundColor(colorful.BlackBackgroundColor).Println("WhiteColor+BlackBackgroundColor")
+
+	// print multiple with different color and background color
+	colorful.WithColor(colorful.RedColor).
+		Print("Hi ").
+		WithColor(colorful.BlueColor).
+		Print("Erfan")
 }
