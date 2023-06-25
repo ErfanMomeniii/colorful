@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// Color
+// Colors
 const (
 	DefaultColor       = ""
 	BlackColor         = "\u001b[30m"
@@ -26,7 +26,7 @@ const (
 	ResetColor         = "\u001b[0m"
 )
 
-// Background color
+// Background colors
 const (
 	DefaultBackgroundColor       = ""
 	BlackBackgroundColor         = "\u001b[40m"
