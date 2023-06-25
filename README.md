@@ -53,7 +53,7 @@ func main() {
 ```
 
 You can also print many texts with different colors and background colors only in one operation like below:
-```
+```go
 package main
 
 import (
@@ -67,7 +67,7 @@ func main() {
 		Print("Erfan")
 }
 ```
-output:
+<b>output:</b>
     
 <img src="./assets/photo/multiple.png" />
 
