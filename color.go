@@ -95,7 +95,7 @@ func Print(text ...any) *Pattern {
 
 // Print prints inputted text formats with the color and background that set in the pattern.
 func (p *Pattern) Print(text ...any) *Pattern {
-	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+	fmt.Print(p.Sprint(text...))
 
 	return p
 }
@@ -112,7 +112,7 @@ func Println(text ...any) *Pattern {
 
 // Println prints text formats with the color and background that set in the pattern and ends with newline.
 func (p *Pattern) Println(text ...any) *Pattern {
-	fmt.Println(p.Color, p.BackgroundColor, fmt.Sprint(text...), ResetColor)
+	fmt.Println(p.Sprintln(text...))
 
 	return p
 }
@@ -129,7 +129,7 @@ func Printf(format string, params ...any) *Pattern {
 
 // Printf prints text formats with the inputted format ,color and background that set in the pattern.
 func (p *Pattern) Printf(format string, params ...any) *Pattern {
-	fmt.Print(p.Color, p.BackgroundColor, fmt.Sprintf(format, params...), ResetColor)
+	fmt.Printf(p.Sprintf(format, params...))
 
 	return p
 }
